@@ -1,0 +1,185 @@
+/* Fonte Family is going to be used in this application */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Clear all the formats standard because I will create my own */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS general */
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100vh;
+    font-family: "VT323", monospace;
+}
+.pavement {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* CSS of controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    height: 100px;
+    background-color: rgb(35, 22, 36);
+
+}
+.controls .display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
+    border: 10px solid rgb(82, 81, 81);
+    height: 100%;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+.controls button {
+    margin-top: 15px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: 6px solid rgb(82, 81, 81);
+}
+.controls button.highlight {
+    border-color: yellow;
+}
+
+/* CSS street */
+
+.street {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(173, 158, 170);
+    gap: 30px;
+    border-top: 10px solid whitesmoke;
+}
+
+.street > .lane {
+    flex: 1;
+    height: 10px;
+    background-color: #ddd;
+}
+
+/* CSS tree */
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tree::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: green;
+}
+.tree::after {
+    content: "";
+    width: 20px;
+    height: 100px;
+    background-color: rgb(103, 30, 30);
+}
+
+/* CSS building */
+
+.building{
+    display: flex;
+    width: 500px;
+    height: 100%;
+    background-color: rgb(70, 116, 55);
+    gap: 10px;
+}
+.colums {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(90, 82, 76);
+    flex: 2;
+}
+.floor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    border-bottom: 2px solid white ;
+}
+.door {
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    background-color: rgb(212, 212, 241);
+    width: 40%;
+    height: 80%;
+    border: solid 5px rgb(174, 174, 184);
+    border-bottom-width: 0;
+}
+.door::after {
+    content: "";
+    width: 30%;
+    height: 15%;
+    border-radius: 5px;
+    background-color: rgb(70, 76, 76);
+}
+.groundFloor {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex: 1;
+    border-bottom: 2px solid rgb(22, 19, 19) ;
+}
+.window {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px white;
+    background-color: rgb(209, 231, 227);
+    height: 50%;
+    width: 40%;
+}
+.window::before {
+    content: "";
+    position: absolute;
+    border: 0.5px solid rgb(129, 142, 128);
+    top: 0;
+    height: 100%;
+    width: 1px;
+}
+.window::after {
+    content: "";
+    position: absolute;
+    border: 0.5px solid rgb(129, 142, 128);
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+.pit {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: rgb(231, 213, 213);
+    flex: 1;
+}
+.lift {
+    position: absolute;
+    border: 3px solid black;
+    border-top-width: 10px;
+    width: 80%;
+    background-color: rgb(224, 244, 225);
+    bottom: 0;
+}
